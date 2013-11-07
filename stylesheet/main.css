@@ -1,0 +1,46 @@
+div.pane, div#menuPane, div#enemyPickerPane, div#heroPane, div#shopPane, div#actionPane {
+  position: absolute;
+  margin: 0;
+  border: none; }
+
+div#menuPane {
+  top: 0;
+  left: 200px;
+  width: -moz-calc(100% -  400px);
+  width: -o-calc(100% -  400px);
+  width: -webkit-calc(100% -  400px);
+  width: calc(100% -  400px);
+  height: 100px; }
+
+div#enemyPickerPane {
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%; }
+
+div#heroPane {
+  bottom: 0;
+  left: 200px;
+  width: -moz-calc(100% -  400px);
+  width: -o-calc(100% -  400px);
+  width: -webkit-calc(100% -  400px);
+  width: calc(100% -  400px);
+  height: 200px; }
+
+div#shopPane {
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 200px; }
+
+div#actionPane {
+  top: 100px;
+  left: 200px;
+  width: -moz-calc(100% -  400px);
+  width: -o-calc(100% -  400px);
+  width: -webkit-calc(100% -  400px);
+  width: calc(100% -  400px);
+  height: -moz-calc(100% -  300px);
+  height: -o-calc(100% -  300px);
+  height: -webkit-calc(100% -  300px);
+  height: calc(100% -  300px); }
