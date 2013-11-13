@@ -10,3 +10,5 @@ function Hero()
     this.saveState();
     this.inventory = Inventory();
 }
+
+Hero.

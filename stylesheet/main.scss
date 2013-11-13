@@ -1,13 +1,30 @@
 @import 'mixins';
+html
+{
+  height: 100%;
+}
+body
+{
+  min-width: 800px;
+  min-height: 600px;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+}
 
 div.pane
 {
+  border: 1px solid;
   position: absolute;
   margin: 0;
-  border: none;
+  background: gray;
 }
 
-$paneWidth : 200px;
+$paneWidth : 380px;
+$paneHeight: 190px;
 
 div#menuPane
 {
@@ -15,16 +32,17 @@ div#menuPane
   top: 0;
   left: $paneWidth;
   @include calc(width, #{"100% -  #{$paneWidth * 2}"});
-  height: $paneWidth / 2;
+  height: $paneHeight;
 }
 
 div#enemyPickerPane
 {
   @extend div.pane;
-  top: 0;
-  left: 0;
-  width: $paneWidth;
-  height: 100%;
+  top: $paneWidth / 2;
+  left: $paneWidth;
+  @include calc(width, #{"100% -  #{$paneWidth * 2}"});
+  @include calc(height, #{"100% -  #{$paneHeight * 2}"});
+
 }
 
 div#heroPane
@@ -32,8 +50,8 @@ div#heroPane
   @extend div.pane;
   bottom: 0;
   left: $paneWidth;
-  @include calc(width, #{"100% -  #{$paneWidth * 2}"});
-  height: $paneWidth;
+  @include calc(width, #{"100% -  #{$paneWidth}"});
+  height: $paneHeight;
 }
 
 div#shopPane
@@ -41,15 +59,29 @@ div#shopPane
   @extend div.pane;
   top: 0;
   right: 0;
-  height: 100%;
+  @include calc(height, #{"100% -  #{$paneHeight}"});
   width: $paneWidth;
 }
 
 div#actionPane
 {
+  background: green;
   @extend div.pane;
-  top: $paneWidth / 2;
-  left: $paneWidth;
-  @include calc(width, #{"100% -  #{$paneWidth * 2}"});
-  @include calc(height, #{"100% -  #{$paneWidth * 3/2}"});
+
+  top: 0;
+  left: 0;
+  width: $paneWidth;
+  height: 100%;
+
+  div#enemyContainer
+  {
+    $width: 300px;
+    $top: 200px;
+    width: $width;
+    height: $width;
+    position: relative;
+    left: ($paneWidth - $width) / 2;
+    top: $top;
+    background: white;
+  }
 }

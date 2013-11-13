@@ -1,46 +1,71 @@
+html {
+  height: 100%; }
+
+body {
+  min-width: 800px;
+  min-height: 600px;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0; }
+
 div.pane, div#menuPane, div#enemyPickerPane, div#heroPane, div#shopPane, div#actionPane {
+  border: 1px solid;
   position: absolute;
   margin: 0;
-  border: none; }
+  background: gray; }
 
 div#menuPane {
   top: 0;
-  left: 200px;
-  width: -moz-calc(100% -  400px);
-  width: -o-calc(100% -  400px);
-  width: -webkit-calc(100% -  400px);
-  width: calc(100% -  400px);
-  height: 100px; }
+  left: 380px;
+  width: -moz-calc(100% -  760px);
+  width: -o-calc(100% -  760px);
+  width: -webkit-calc(100% -  760px);
+  width: calc(100% -  760px);
+  height: 190px; }
 
 div#enemyPickerPane {
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%; }
+  top: 190px;
+  left: 380px;
+  width: -moz-calc(100% -  760px);
+  width: -o-calc(100% -  760px);
+  width: -webkit-calc(100% -  760px);
+  width: calc(100% -  760px);
+  height: -moz-calc(100% -  380px);
+  height: -o-calc(100% -  380px);
+  height: -webkit-calc(100% -  380px);
+  height: calc(100% -  380px); }
 
 div#heroPane {
   bottom: 0;
-  left: 200px;
-  width: -moz-calc(100% -  400px);
-  width: -o-calc(100% -  400px);
-  width: -webkit-calc(100% -  400px);
-  width: calc(100% -  400px);
-  height: 200px; }
+  left: 380px;
+  width: -moz-calc(100% -  380px);
+  width: -o-calc(100% -  380px);
+  width: -webkit-calc(100% -  380px);
+  width: calc(100% -  380px);
+  height: 190px; }
 
 div#shopPane {
   top: 0;
   right: 0;
-  height: 100%;
-  width: 200px; }
+  height: -moz-calc(100% -  190px);
+  height: -o-calc(100% -  190px);
+  height: -webkit-calc(100% -  190px);
+  height: calc(100% -  190px);
+  width: 380px; }
 
 div#actionPane {
-  top: 100px;
-  left: 200px;
-  width: -moz-calc(100% -  400px);
-  width: -o-calc(100% -  400px);
-  width: -webkit-calc(100% -  400px);
-  width: calc(100% -  400px);
-  height: -moz-calc(100% -  300px);
-  height: -o-calc(100% -  300px);
-  height: -webkit-calc(100% -  300px);
-  height: calc(100% -  300px); }
+  background: green;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 100%; }
+  div#actionPane div#enemyContainer {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 40px;
+    top: 200px;
+    background: white; }
