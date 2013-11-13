@@ -1,6 +1,7 @@
+
 $(document).ready(function () {
-    var hero = Hero();
-    var currentEnemy = Creep();
+    var hero = Hero.new();
+    var currentEnemy = Creep.new();
     var actionPane = $('div#actionPane');
     var enemyContainer = $('div#enemyContainer');
 

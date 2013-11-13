@@ -12,14 +12,18 @@ body {
   padding: 0; }
 
 div.pane, div#menuPane, div#enemyPickerPane, div#heroPane, div#shopPane, div#actionPane {
-  border: 1px solid;
   position: absolute;
   margin: 0;
-  background: gray; }
+  background: gray;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box; }
 
 div#menuPane {
   top: 0;
   left: 380px;
+  border-bottom: 1px solid black;
   width: -moz-calc(100% -  760px);
   width: -o-calc(100% -  760px);
   width: -webkit-calc(100% -  760px);
@@ -39,6 +43,7 @@ div#enemyPickerPane {
   height: calc(100% -  380px); }
 
 div#heroPane {
+  border-top: 1px solid black;
   bottom: 0;
   left: 380px;
   width: -moz-calc(100% -  380px);
@@ -48,6 +53,7 @@ div#heroPane {
   height: 190px; }
 
 div#shopPane {
+  border-left: 1px solid black;
   top: 0;
   right: 0;
   height: -moz-calc(100% -  190px);
@@ -58,6 +64,7 @@ div#shopPane {
 
 div#actionPane {
   background: green;
+  border-right: 1px black solid;
   top: 0;
   left: 0;
   width: 380px;

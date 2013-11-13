@@ -17,10 +17,11 @@ body
 
 div.pane
 {
-  border: 1px solid;
   position: absolute;
   margin: 0;
   background: gray;
+
+  @include box-sizing(border-box);
 }
 
 $paneWidth : 380px;
@@ -31,6 +32,7 @@ div#menuPane
   @extend div.pane;
   top: 0;
   left: $paneWidth;
+  border-bottom: 1px solid black;
   @include calc(width, #{"100% -  #{$paneWidth * 2}"});
   height: $paneHeight;
 }
@@ -48,6 +50,7 @@ div#enemyPickerPane
 div#heroPane
 {
   @extend div.pane;
+  border-top: 1px solid black;
   bottom: 0;
   left: $paneWidth;
   @include calc(width, #{"100% -  #{$paneWidth}"});
@@ -57,6 +60,7 @@ div#heroPane
 div#shopPane
 {
   @extend div.pane;
+  border-left: 1px solid black;
   top: 0;
   right: 0;
   @include calc(height, #{"100% -  #{$paneHeight}"});
@@ -67,6 +71,7 @@ div#actionPane
 {
   background: green;
   @extend div.pane;
+  border-right: 1px black solid;
 
   top: 0;
   left: 0;
